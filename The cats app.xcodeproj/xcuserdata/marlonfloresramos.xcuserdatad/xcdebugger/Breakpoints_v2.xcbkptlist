@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8A68CEA6-6C03-4A8B-8B82-EC3E6B479984"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AAD3287B-AE4F-4A63-89D0-2466F43566B6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The cats app/ApiCats.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getCats()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AAD3287B-AE4F-4A63-89D0-2466F43566B6 - a21514532d6b5a9d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for The_cats_app.ApiCats.getCats() async throws -&gt; Swift.Array&lt;The_cats_app.Cat&gt;"
+                  moduleName = "The cats app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marlonfloresramos/Documents/software_development/Swift/The%20cats%20app/The%20cats%20app/ApiCats.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1216">
+               </Location>
+               <Location
+                  uuid = "AAD3287B-AE4F-4A63-89D0-2466F43566B6 - a21514532d6b5a9d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for The_cats_app.ApiCats.getCats() async throws -&gt; Swift.Array&lt;The_cats_app.Cat&gt;"
+                  moduleName = "The cats app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marlonfloresramos/Documents/software_development/Swift/The%20cats%20app/The%20cats%20app/ApiCats.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1224">
+               </Location>
+               <Location
+                  uuid = "AAD3287B-AE4F-4A63-89D0-2466F43566B6 - 9894b6c3cbac1e9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for The_cats_app.ApiCats.getCats() async throws -&gt; Swift.Array&lt;The_cats_app.Cat&gt;"
+                  moduleName = "The cats app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marlonfloresramos/Documents/software_development/Swift/The%20cats%20app/The%20cats%20app/ApiCats.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1348">
+               </Location>
+               <Location
+                  uuid = "AAD3287B-AE4F-4A63-89D0-2466F43566B6 - 9894b6c3cbac1e9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for The_cats_app.ApiCats.getCats() async throws -&gt; Swift.Array&lt;The_cats_app.Cat&gt;"
+                  moduleName = "The cats app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marlonfloresramos/Documents/software_development/Swift/The%20cats%20app/The%20cats%20app/ApiCats.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1356">
+               </Location>
+               <Location
+                  uuid = "AAD3287B-AE4F-4A63-89D0-2466F43566B6 - 75165772d1e5c299"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for The_cats_app.ApiCats.getCats() async throws -&gt; Swift.Array&lt;The_cats_app.Cat&gt;"
+                  moduleName = "The cats app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marlonfloresramos/Documents/software_development/Swift/The%20cats%20app/The%20cats%20app/ApiCats.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1356">
+               </Location>
+               <Location
+                  uuid = "AAD3287B-AE4F-4A63-89D0-2466F43566B6 - 75165772d1e5c299"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for The_cats_app.ApiCats.getCats() async throws -&gt; Swift.Array&lt;The_cats_app.Cat&gt;"
+                  moduleName = "The cats app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marlonfloresramos/Documents/software_development/Swift/The%20cats%20app/The%20cats%20app/ApiCats.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1364">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
