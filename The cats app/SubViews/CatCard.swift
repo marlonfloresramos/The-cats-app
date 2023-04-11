@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CatCard: View {
     let cat: Cat
+    @Binding var isLoadingImage: Bool
     
     var body: some View {
         ZStack {
@@ -19,6 +20,7 @@ struct CatCard: View {
                 Text(cat.name ?? "")
                     .font(.title)
                     .fontWeight(.bold)
+                    .foregroundColor(isLoadingImage ? .black : .gray)
                 AsyncImage(
                     url: URL(string: cat.imageURL?.url ?? ""),
                     content: { image in
@@ -62,6 +64,6 @@ struct CatCard: View {
 
 struct CatCard_Previews: PreviewProvider {
     static var previews: some View {
-        CatCard(cat: Cat(id: "abys", name: "Abyssinian", origin: "Egypt", intelligence: 5, imageURL: CatImage(url: "https://cdn2.thecatapi.com/images/VZ3qFLIe3.jpg")))
+        CatCard(cat: Cat(id: "abys", name: "Abyssinian", origin: "Egypt", intelligence: 5, imageURL: CatImage(url: "https://cdn2.thecatapi.com/images/VZ3qFLIe3.jpg")), isLoadingImage: .constant(true))
     }
 }

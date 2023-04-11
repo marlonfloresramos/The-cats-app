@@ -19,7 +19,7 @@ struct CatsView: View {
             } else {
                 LazyVStack {
                     ForEach(viewModel.cats) { cat in
-                        CatCard(cat: cat)
+                        CatCard(cat: cat, isLoadingImage: $viewModel.isLoadingImages)
                     }
                 }
             }

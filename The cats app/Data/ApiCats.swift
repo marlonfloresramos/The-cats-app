@@ -13,6 +13,7 @@ enum RequestError: Error {
 
 protocol ApiCatRepresentable {
     func getCats() async throws -> [Cat]
+    func getCatImageURL(with id: String) async throws -> [CatImage]
 }
 
 class ApiCats: ApiCatRepresentable {
@@ -26,12 +27,12 @@ class ApiCats: ApiCatRepresentable {
             let (data, _) = try await URLSession.shared.data(for: request)
             let decoder = JSONDecoder()
             let cats = try decoder.decode([Cat].self, from: data)
-            for (index, cat) in cats.enumerated() {
-                do {
-                    let imageCat = try? await getCatImageURL(with: cat.id ?? "")
-                    cats[index].imageURL = imageCat?.first
-                }
-            }
+//            for (index, cat) in cats.enumerated() {
+//                do {
+//                    let imageCat = try? await getCatImageURL(with: cat.id ?? "")
+//                    cats[index].imageURL = imageCat?.first
+//                }
+//            }
             return cats
         } catch {
             throw RequestError.genericError
@@ -55,6 +56,10 @@ class ApiCats: ApiCatRepresentable {
 }
 
 class MockedApiCats: ApiCatRepresentable {
+    func getCatImageURL(with id: String) async throws -> [CatImage] {
+        return [CatImage(url: "https://cdn2.thecatapi.com/images/VZ3qFLIe3.jpg")]
+    }
+    
     func getCats() async throws -> [Cat] {
         let cat = Cat(id: "abys", name: "Abyssinian", origin: "Egypt", intelligence: 5, imageURL: CatImage(url: "https://cdn2.thecatapi.com/images/VZ3qFLIe3.jpg"))
         return [cat]

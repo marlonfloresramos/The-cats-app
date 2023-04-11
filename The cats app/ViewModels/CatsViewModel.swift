@@ -11,6 +11,7 @@ class CatsViewModel: ObservableObject {
     let networkingManager: ApiCatRepresentable
     
     @Published var isLoading = false
+    @Published var isLoadingImages = false
     @Published var cats = [Cat]()
     
     init(networkingManager: ApiCatRepresentable) {
@@ -18,13 +19,25 @@ class CatsViewModel: ObservableObject {
     }
     
     func getCats() {
-        isLoading = true
         Task { @MainActor in
+            isLoading = true
             do {
                 cats = try await networkingManager.getCats()
                 isLoading = false
+                await getImages()
+                isLoadingImages = false
             } catch {
                 print(error)
+            }
+        }
+    }
+    
+    func getImages() async {
+        isLoadingImages = true
+        for (index, cat) in cats.enumerated() {
+            do {
+                let imageCat = try? await networkingManager.getCatImageURL(with: cat.id ?? "")
+                cats[index].imageURL = imageCat?.first
             }
         }
     }
