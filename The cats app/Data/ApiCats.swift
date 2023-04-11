@@ -40,7 +40,7 @@ class ApiCats: ApiCatRepresentable {
     
     func getCatImageURL(with id: String) async throws -> [CatImage] {
         guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?breed_ids=\(id)&limit=1") else {throw RequestError.genericError}
-        var request = URLRequest(url: url)
+        let request = URLRequest(url: url)
         
         do {
             let (data, _) = try await URLSession.shared.data(for: request)
