@@ -25,7 +25,6 @@ class CatsViewModel: ObservableObject {
                 cats = try await networkingManager.getCats()
                 isLoading = false
                 await getImages()
-                isLoadingImages = false
             } catch {
                 print(error)
             }
@@ -33,11 +32,14 @@ class CatsViewModel: ObservableObject {
     }
     
     func getImages() async {
-        isLoadingImages = true
-        for (index, cat) in cats.enumerated() {
-            do {
-                let imageCat = try? await networkingManager.getCatImageURL(with: cat.id ?? "")
-                cats[index].imageURL = imageCat?.first
+        Task { @MainActor in
+            for (index, cat) in cats.enumerated() {
+                isLoadingImages = true
+                do {
+                    let imageCat = try? await networkingManager.getCatImageURL(with: cat.id ?? "")
+                    cats[index].imageURL = imageCat?.first
+                    isLoadingImages = false
+                }
             }
         }
     }
