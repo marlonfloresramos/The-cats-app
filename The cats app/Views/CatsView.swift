@@ -14,11 +14,16 @@ struct CatsView: View {
         ScrollView {
             Text("Catbreeds")
                 .font(.title)
-            LazyVStack {
-                ForEach(viewModel.cats) { cat in
-                    CatCard(cat: cat)
+            if viewModel.isLoading {
+                ProgressView()
+            } else {
+                LazyVStack {
+                    ForEach(viewModel.cats) { cat in
+                        CatCard(cat: cat)
+                    }
                 }
             }
+            
         }
         .onAppear {
             viewModel.getCats()
