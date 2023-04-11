@@ -17,6 +17,8 @@ struct CatCard: View {
                 .shadow(radius: 10)
             VStack {
                 Text(cat.name ?? "")
+                    .font(.title)
+                    .fontWeight(.bold)
                 AsyncImage(
                     url: URL(string: cat.imageURL?.url ?? ""),
                     content: { image in
@@ -30,12 +32,24 @@ struct CatCard: View {
                     })
                 HStack {
                     VStack {
-                        Text("Pais de origen")
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                                .fill(.white)
+                                .shadow(radius: 10)
+                            Text("Pais de origen")
+                                .fontWeight(.bold)
+                        }
                         Text(cat.origin ?? "")
                     }
                     Spacer()
                     VStack {
-                        Text("Inteligencia")
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                                .fill(.white)
+                                .shadow(radius: 10)
+                            Text("Inteligencia")
+                                .fontWeight(.bold)
+                        }
                         Text(String(cat.intelligence ?? 0))
                     }
                 }
