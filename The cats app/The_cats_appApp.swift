@@ -11,7 +11,7 @@ import SwiftUI
 struct The_cats_appApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CatsView(viewModel: CatsViewModel(networkingManager: ApiCats()))
         }
     }
 }
