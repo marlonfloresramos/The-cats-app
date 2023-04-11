@@ -11,7 +11,11 @@ enum RequestError: Error {
     case genericError
 }
 
-class ApiCats {
+protocol ApiCatRepresentable {
+    func getCats() async throws -> [Cat]
+}
+
+class ApiCats: ApiCatRepresentable {
     func getCats() async throws -> [Cat] {
         guard let url = URL(string: "https://api.thecatapi.com/v1/breeds?limit=10") else  {throw RequestError.genericError}
         var request = URLRequest(url: url)
@@ -47,5 +51,12 @@ class ApiCats {
             print(error)
             throw RequestError.genericError
         }
+    }
+}
+
+class MockedApiCats: ApiCatRepresentable {
+    func getCats() async throws -> [Cat] {
+        let cat = Cat(id: "abys", name: "Abyssinian", origin: "Egypt", intelligence: 5, imageURL: CatImage(url: "https://cdn2.thecatapi.com/images/VZ3qFLIe3.jpg"))
+        return [cat]
     }
 }

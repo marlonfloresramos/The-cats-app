@@ -8,10 +8,10 @@
 import SwiftUI
 
 class CatsViewModel: ObservableObject {
-    let networkingManager: ApiCats
+    let networkingManager: ApiCatRepresentable
     @Published var cats = [Cat]()
     
-    init(networkingManager: ApiCats) {
+    init(networkingManager: ApiCatRepresentable) {
         self.networkingManager = networkingManager
     }
     

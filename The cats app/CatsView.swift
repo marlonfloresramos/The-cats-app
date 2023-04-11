@@ -36,6 +36,7 @@ struct CatsView: View {
                                     Text("Pais de origen")
                                     Text(cat.origin ?? "")
                                 }
+                                Spacer()
                                 VStack {
                                     Text("Inteligencia")
                                     Text(String(cat.intelligence ?? 0))
@@ -56,6 +57,6 @@ struct CatsView: View {
 
 struct CatsView_Previews: PreviewProvider {
     static var previews: some View {
-        CatsView(viewModel: CatsViewModel(networkingManager: ApiCats()))
+        CatsView(viewModel: CatsViewModel(networkingManager: MockedApiCats()))
     }
 }

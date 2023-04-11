@@ -13,9 +13,21 @@ class Cat: Decodable, Identifiable {
     let origin: String?
     let intelligence: Int?
     var imageURL: CatImage?
+    
+    init(id: String?, name: String?, origin: String?, intelligence: Int?, imageURL: CatImage? = nil) {
+        self.id = id
+        self.name = name
+        self.origin = origin
+        self.intelligence = intelligence
+        self.imageURL = imageURL
+    }
 }
 
 class CatImage: Decodable {
     let url: String?
+    
+    init(url: String?) {
+        self.url = url
+    }
 }
 
