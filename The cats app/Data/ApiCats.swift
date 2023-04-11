@@ -18,7 +18,7 @@ protocol ApiCatRepresentable {
 
 class ApiCats: ApiCatRepresentable {
     func getCats() async throws -> [Cat] {
-        guard let url = URL(string: "https://api.thecatapi.com/v1/breeds?limit=10") else  {throw RequestError.genericError}
+        guard let url = URL(string: "https://api.thecatapi.com/v1/breeds") else  {throw RequestError.genericError}
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("bda53789-d59e-46cd-9bc4-2936630fde39", forHTTPHeaderField: "x-api-key")
